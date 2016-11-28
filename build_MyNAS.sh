@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### PARAMS ###
-VERSION=0.1
+VERSION=0.2
 
 # Run unit testing
 # Not Yet...
@@ -9,7 +9,8 @@ VERSION=0.1
 # Packaging
 echo '--- Packaging... ---'
 mkdir MyNAS
-cp -R classes MyNAS/
+cp -r classes MyNAS/
+rm -r classes/__pycache__
 cp backup_volume_path.py MyNAS/
 cp backup.sh MyNAS/
 cp BackupMain.py MyNAS/

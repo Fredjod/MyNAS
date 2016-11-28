@@ -29,7 +29,9 @@ class PidFile(object):
 
     def __enter__(self):
         try:
-            self.pidfd = open(self.pidfile, 'x')
+            if os.path.exists(self.pidfile):
+                raise OSError (errno.EEXIST, "Error: File already exists")
+            self.pidfd = open(self.pidfile, 'w')
             self.log('locked pidfile %s\n' % self.pidfile)
         except OSError as e:
             if e.errno == errno.EEXIST:
@@ -39,7 +41,7 @@ class PidFile(object):
                     raise ProcessRunningException('process already running in %s as pid %s' % (self.pidfile, pid));
                 else:
                     self._remove()
-                    self.pidfd = open(self.pidfile, 'x')
+                    self.pidfd = open(self.pidfile, 'w')
             else:
                 raise
 
