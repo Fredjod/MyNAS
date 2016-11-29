@@ -13,7 +13,11 @@ Why should we connect over the internet the free spaces that we already all have
   - Have a backup of our archives.
   
 **The solution:**
-  - Plug our external USB drive behind raspberry-pi at home. Since the v3 (early 2016), the raspberry-pi USB ports can power an external drive.
-  - At home, use the Internet box as a router for using the raspberry-pi + USB disk like a NAS over the home LAN.
-  - Inter-connect over the Internet several raspberry-pi+usb disk in a secure way (SSL w/ RSA key), for creating a network of storage nodes.
-  - Add a layer of software for monitoring the network of stortage nodes, backup process, allocate free space, etc... This is the purpose of the code in this Github repository.
+  - Plug our external USB drive behind a raspberry-pi at home. Since the v3 (early 2016), the raspberry-pi USB ports can power an external drive.
+  - At home, use the Internet box as a router for using the raspberry-pi + USB disk like a NAS over the home LAN. The PC/MAC are backed up by mounting a network drive and use the backup software provided by Microsoft (File History) and Apple (Timemachine).
+  - Inter-connect over the Internet several raspberry-pi + USB disk in a secure way (SSL w/ RSA key), for creating a network of storage nodes.
+  - Add a layer of software for managing the network of stortage nodes:
+    - Declare node / and available freespace (quota)
+    - Setup the synchronisation of data/directories between nodes
+    - Monitor the synchronisation, space usage, etc...
+This is the purpose of the code in this Github repository.
