@@ -14,7 +14,7 @@ Why should we connect over the internet the free spaces that we already all have
   - Have a backup of our archives.
   
 ## Solution
-  - Plug our external USB drive behind a raspberry-pi at home. Since the v3 (early 2016), the raspberry-pi USB ports can power an external drive. Raspberry-pi v3 costs 56 Euros TTC. Any USB disk (already used for manual backup) can be plugged to the raspberry USB port. 
+  - Plug our external USB drive behind a raspberry-pi at home. Since the v3 (early 2016), the raspberry-pi USB ports can power an external drive. Raspberry-pi v3 costs 55 Euros. Any USB disk (already used for manual backup) can be plugged to the raspberry USB port. 
   - At home, use of the Internet box as a router for using the raspberry-pi + USB disk like a NAS. The PC/MAC are backed up by mounting a network drive and use the backup software provided by Microsoft (File History) and Apple (Timemachine).
   - Inter-connect over the Internet several family/friends raspberry-pi + USB disk in a secure way (SSL w/ RSA key), for creating a network of storage nodes.
   - The File History, Timemachine and other archive data are replicated in a daily basis over this network of storage nodes, making those fully secured... Even if a day your house was on fire (I don't wish you this), your life videos/photos would be safed on a disk of a friend or familly member!
