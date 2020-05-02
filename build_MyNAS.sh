@@ -12,7 +12,7 @@ mkdir MyNAS
 cp -r classes MyNAS/
 rm -r classes/__pycache__
 cp backup_volume_path.py MyNAS/
-cp backup.sh MyNAS/
+# cp backup.sh MyNAS/
 cp BackupMain.py MyNAS/
 chmod +x MyNAS/backup.sh
 chmod +x MyNAS/BackupMain.py

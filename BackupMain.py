@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.5
+#!/usr/bin/python3
 # encoding: utf-8
 '''
 Created on 25 nov. 2016
@@ -13,7 +13,7 @@ import os, sys, getopt
 import backup_volume_path
 import logging
 
-LOG_DIR="/usr/local/logs/"
+LOG_DIR="/mnt/logs/"
 
 def usage():
     print ('Usage: backup.py -v <volume>')

@@ -1,0 +1,15 @@
+<h1>Node Creation</h1>
+
+{% if error_message %}<p><font color='red'><strong>{{ error_message }}</strong></font></p>{% endif %}
+{% if info_message %}<p><font color='green'><strong>{{ info_message }}</strong></font></p>{% endif %}
+
+Please fill out all Node details:<P>
+<form action="{% url 'nodeAdmin:createNodeRequest' %}" method="post">
+{% csrf_token %}
+	Name: <input type="text" name="name" required><br>
+	Remote address: <input type="text" name="remoteAddress"><br>
+	Max upload bandwidth (in KBytes): <input type="number" name="maxUpBw"><br>
+	Max download bandwidth (in KBytes): <input type="number" name="maxDownBw"><br>
+	Max disk space (in GBytes): <input type="number" name="maxSpace"><br>
+	<input type="submit" value="createNode" />
+</form>
