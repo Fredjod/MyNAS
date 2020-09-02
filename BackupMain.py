@@ -38,6 +38,10 @@ def main(argList):
     try:
         if volume in backup_volume_path.rsync_nodes:
             if os.path.isfile(LOG_DIR+"bck-"+volume+".log"):
+                try:
+                    os.remove(LOG_DIR+"bck-"+volume+".1.log")
+                except:
+                    pass
                 os.rename(LOG_DIR+"bck-"+volume+".log", LOG_DIR+"bck-"+volume+".1.log")
             with PidFile("/tmp/bck-"+volume+".lock"):
                 # launch backup
